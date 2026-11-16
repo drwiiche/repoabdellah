@@ -1,0 +1,252 @@
+@import "tailwindcss";
+
+:root {
+  --cdg-green: #469041;
+  --cdg-blue: #2A6AD0;
+  --cdg-navy: #0D2538;
+  --cdg-signal: #5AB0FF;
+  --cdg-copper: #B88456;
+  --cdg-paper: #F6F4EF;
+  --cdg-logo-gray: #354048;
+}
+
+@layer base {
+  html {
+    font-family: "IBM Plex Sans Arabic", "Plus Jakarta Sans", system-ui, sans-serif;
+    scroll-behavior: smooth;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    font-family: "IBM Plex Sans Arabic", "Plus Jakarta Sans", system-ui, sans-serif;
+    background-color: #E8E6DF;
+    color: #0D2538;
+    overflow-x: hidden;
+  }
+}
+
+.font-arabic {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+
+.font-latin {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.font-mono-tech {
+  font-family: "IBM Plex Mono", monospace;
+  font-variant-numeric: tabular-nums;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+/* =========================================================
+   TRACK 01: HUMAN VISION & STRATEGIC CLARITY TREATMENTS
+   ========================================================= */
+.track1-gradient {
+  background: linear-gradient(
+    90deg,
+    #469041 0%,
+    #256E4B 24%,
+    #164863 52%,
+    #0F2F47 76%,
+    #0D2538 100%
+  );
+}
+
+.track1-gradient-ltr {
+  background: linear-gradient(
+    90deg,
+    #0D2538 0%,
+    #11324D 32%,
+    #1B5668 64%,
+    #469041 100%
+  );
+}
+
+/* Natural 35mm Analog Silver-Halide Film Grain */
+.film-grain {
+  position: relative;
+}
+
+.film-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.24;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-size: 160px 160px;
+}
+
+/* Signature Blue-Green Editorial Portrait Rim Halo */
+.portrait-halo {
+  box-shadow:
+    -10px -6px 28px -6px rgba(42, 106, 208, 0.55),
+    10px 8px 30px -6px rgba(70, 144, 65, 0.52),
+    0 0 0 1px rgba(90, 176, 255, 0.22);
+}
+
+.portrait-halo-ring {
+  background: radial-gradient(
+      circle at 22% 24%,
+      rgba(42, 106, 208, 0.48) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 80% 72%,
+      rgba(70, 144, 65, 0.5) 0%,
+      transparent 58%
+    );
+}
+
+/* =========================================================
+   TRACK 02: ANALYTICAL PRECISION & SIGNAL POINT
+   ========================================================= */
+.signal-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 9999px;
+  background-color: #5AB0FF;
+  box-shadow: 0 0 0 3px rgba(90, 176, 255, 0.22);
+  flex-shrink: 0;
+}
+
+.signal-dot-lg {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 9999px;
+  background-color: #5AB0FF;
+  box-shadow: 0 0 0 4px rgba(90, 176, 255, 0.25);
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   TRACK 03: ARCHITECTURAL SOVEREIGNTY & MATERIALITY
+   ========================================================= */
+.cotton-paper {
+  background-color: #F6F4EF;
+  background-image:
+    radial-gradient(rgba(13, 37, 56, 0.025) 1px, transparent 0),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)' opacity='0.055'/%3E%3C/svg%3E");
+  background-size: 16px 16px, 200px 200px;
+}
+
+/* Authentic Blind Embossing (Raised Dry Relief on Heavy Cotton Stock) */
+.blind-emboss {
+  background: linear-gradient(145deg, #FAF8F4 0%, #F1EEE7 100%);
+  box-shadow:
+    -3px -3px 6px rgba(255, 255, 255, 0.96),
+    3px 3px 7px rgba(13, 37, 56, 0.11),
+    inset 1px 1px 0px rgba(255, 255, 255, 0.9),
+    inset -1px -1px 1px rgba(13, 37, 56, 0.06);
+}
+
+.blind-deboss {
+  background: linear-gradient(145deg, #ECE8DF 0%, #F7F5F0 100%);
+  box-shadow:
+    inset 2.5px 2.5px 5px rgba(13, 37, 56, 0.11),
+    inset -2.5px -2.5px 5px rgba(255, 255, 255, 0.95);
+}
+
+/* Deep Contemporary Zellige Enamel Luster */
+.zellige-sheen {
+  background-image:
+    linear-gradient(
+      128deg,
+      rgba(255, 255, 255, 0.16) 0%,
+      rgba(255, 255, 255, 0.03) 34%,
+      rgba(0, 0, 0, 0.08) 68%,
+      rgba(255, 255, 255, 0.08) 100%
+    );
+}
+
+/* Exact 1pt Copper Hairline Rule */
+.copper-border {
+  border: 1pt solid #B88456;
+}
+
+.copper-rule-h {
+  height: 1pt;
+  background: linear-gradient(90deg, #9E6C40 0%, #CE9B6B 50%, #9E6C40 100%);
+}
+
+.copper-rule-v {
+  width: 1pt;
+  background: linear-gradient(180deg, #9E6C40 0%, #CE9B6B 50%, #9E6C40 100%);
+}
+
+/* Brand Book Plate Framing */
+.brand-plate {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  box-shadow: 0 22px 60px -24px rgba(13, 37, 56, 0.22), 0 1px 3px rgba(13, 37, 56, 0.08);
+  overflow: hidden;
+}
+
+.print-preview-mode .brand-plate {
+  border: 1px solid rgba(13, 37, 56, 0.16);
+}
+
+/* =========================================================
+   PRINT-READY A4 ENGINE (@media print)
+   ========================================================= */
+@page {
+  size: A4 landscape;
+  margin: 0mm;
+}
+
+@media print {
+  html,
+  body {
+    background: #FFFFFF !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .film-grain::after {
+    mix-blend-mode: normal !important;
+    opacity: 0 !important;
+  }
+
+  .print-container {
+    padding: 0 !important;
+    gap: 0 !important;
+    background: #FFFFFF !important;
+  }
+
+  .brand-plate {
+    zoom: 0.875;
+    max-width: none !important;
+    width: 1280px !important;
+    height: 904px !important;
+    min-height: 904px !important;
+    max-height: 904px !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .brand-plate:last-of-type {
+    page-break-after: auto !important;
+    break-after: auto !important;
+  }
+}
